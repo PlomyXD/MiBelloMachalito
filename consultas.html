@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Consultas y preguntas - MI BELLO MACHALITO">
+        <link rel="stylesheet" href="styles.css">
+        <title>Consultas y Preguntas - MI BELLO MACHALITO</title>
+    </head>
+    <body>
+        <section class="contact-section">
+            <h1>CONSULTAS Y PREGUNTAS</h1>
+            <p>¿Tienes alguna duda sobre nuestros productos? ¡Estamos aquí para ayudarte!</p>
+            
+            <form class="inquiry-form" action="mailto:mibellomachalito@gmail.com" method="POST" enctype="text/plain">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensaje">Tu consulta o pregunta:</label>
+                    <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-submit">Enviar consulta</button>
+            </form>
+
+            <a href="index.html" class="btn-back">Volver a la página principal</a>
+        </section>
+        <footer>
+            <p>&copy; 2026 Paloma Pozo Briones. Todos los derechos reservados.</p>
+        </footer>
+    </body>
+</html>
