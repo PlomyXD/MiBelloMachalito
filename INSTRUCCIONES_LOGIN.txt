@@ -1,0 +1,110 @@
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                    SISTEMA DE LOGIN - INSTRUCCIONES                           ║
+║                         MI BELLO MACHALITO 🐱                                  ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+📋 USUARIOS DISPONIBLES:
+═══════════════════════
+
+👤 ADMIN:
+   Usuario: admin
+   Contraseña: admin123
+   Rol: Administrador (acceso a panel especial)
+
+👤 USUARIO REGULAR:
+   Usuario: usuario
+   Contraseña: usuario123
+   Rol: Usuario Regular
+
+
+🚀 CÓMO USAR:
+═════════════
+
+1. ACCEDER AL LOGIN:
+   - Abre el navegador y ve a: http://localhost/login.html
+   - O haz clic en el botón "🔐 Login" en la página principal
+
+2. INGRESAR CREDENCIALES:
+   - Introduce el usuario y contraseña
+   - Haz clic en "Ingresar"
+
+3. DASHBOARD:
+   - Si las credenciales son correctas, serás redirigido a dashboard.php
+   - Verás un panel personalizado con información de tu sesión
+   - El contador de tiempo conectado se actualiza en tiempo real
+
+4. CERRAR SESIÓN:
+   - Haz clic en "Cerrar Sesión"
+   - Se eliminará la sesión y serás redirigido al login
+
+
+📁 ARCHIVOS CREADOS:
+════════════════════
+
+✅ login.html - Página de login (formulario visual bonito)
+✅ login.php - Procesa el login y valida credenciales
+✅ dashboard.php - Página protegida después del login
+✅ logout.php - Cierra la sesión
+✅ config.php - Configuración de usuarios y roles
+
+
+🔒 CARACTERÍSTICAS DE SEGURIDAD:
+═════════════════════════════════
+
+✓ Sesiones PHP protegidas
+✓ Validación de credenciales
+✓ Redirección de usuarios no autenticados
+✓ Destrucción de sesión en logout
+✓ Mensajes de error claros
+
+
+🎨 CARACTERÍSTICAS VISUALES:
+═════════════════════════════
+
+✓ Diseño responsivo y moderno
+✓ Interfaz consistente con el sitio original
+✓ Animaciones suaves
+✓ Mensajes de error/éxito
+✓ Panel personalizado para cada usuario
+✓ Contador de tiempo de sesión en vivo
+
+
+⚙️ REQUISITOS TÉCNICOS:
+═══════════════════════
+
+✓ PHP 7.0 o superior
+✓ Servidor web (Apache/Nginx con PHP habilitado)
+✓ Soporte para sesiones PHP
+✓ Navegador web moderno
+
+
+📝 NOTAS IMPORTANTES:
+════════════════════
+
+1. Este sistema usa sesiones PHP, no bases de datos reales.
+   Para producción, considera usar una base de datos.
+
+2. Las contraseñas están almacenadas en config.php en texto plano.
+   En producción, deberías usar hashing (bcrypt, etc).
+
+3. El sistema de login protege el acceso a dashboard.php.
+   Intentar acceder sin estar logueado te redirigirá al login.
+
+4. Las sesiones se destruyen completamente en logout.
+
+
+🔧 PERSONALIZACIÓN:
+═══════════════════
+
+Para agregar más usuarios:
+1. Abre config.php
+2. Agrega un nuevo usuario a $usuarios_validos:
+   'nuevo_usuario' => 'contraseña123'
+
+Para agregar más información de usuario:
+1. Modifica el array $roles_usuarios en config.php
+2. Actualiza dashboard.php para mostrar la información
+
+═══════════════════════════════════════════════════════════════════════════════
+¡Sistema de login listo para usar! 🎉
+═══════════════════════════════════════════════════════════════════════════════

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MI BELLO MACHALITO</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .login-container {
+            max-width: 400px;
+            margin: 5rem auto;
+            padding: 2.5rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 18px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .login-container h2 {
+            text-align: center;
+            color: #f70909;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #f70909;
+            box-shadow: 0 0 8px rgba(247, 9, 9, 0.2);
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 1rem;
+            background-color: #f30a0a;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s ease, filter 0.2s ease;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+            filter: brightness(0.9);
+        }
+
+        .error-message {
+            background-color: #ffcccc;
+            color: #c00;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .info-box {
+            background-color: #f0f8ff;
+            border-left: 4px solid #f70909;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .info-box p {
+            text-align: left;
+            margin: 0.3rem 0;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .back-link a {
+            color: #f70909;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>🐱 LOGIN</h2>
+        
+        <div class="info-box">
+            <p><strong>Usuarios de prueba:</strong></p>
+            <p>👤 Admin: <code style="background: #fff; padding: 2px 4px;">admin</code></p>
+            <p>👤 Usuario: <code style="background: #fff; padding: 2px 4px;">usuario</code></p>
+        </div>
+
+        <div class="error-message" id="errorMessage"></div>
+        <div id="successMessage" style="background-color: #ccffcc; color: #0a0; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; text-align: center; display: none; border: 1px solid #0a0;"></div>
+
+        <form action="login.php" method="POST">
+            <div class="form-group">
+                <label for="username">Usuario:</label>
+                <input 
+                    type="text" 
+                    id="username" 
+                    name="username" 
+                    required 
+                    placeholder="Ingresa tu usuario"
+                    autofocus
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    required 
+                    placeholder="Ingresa tu contraseña"
+                >
+            </div>
+
+            <button type="submit" class="login-btn">Ingresar</button>
+        </form>
+
+        <div class="back-link">
+            <a href="index.html">← Volver al inicio</a>
+        </div>
+    </div>
+
+    <script>
+        // Verificar si hay un parámetro de error en la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        if (urlParams.has('error')) {
+            const errorMsg = document.getElementById('errorMessage');
+            errorMsg.textContent = 'Usuario o contraseña incorrectos ❌';
+            errorMsg.classList.add('show');
+        }
+
+        if (urlParams.has('logout')) {
+            const successMsg = document.getElementById('successMessage');
+            successMsg.textContent = '✅ Sesión cerrada exitosamente. ¡Hasta pronto!';
+            successMsg.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
