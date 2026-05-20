@@ -85,6 +85,68 @@ footer {
     font-weight: bold;
 }
 
+/* ESTILOS PARA FORMULARIOS */
+.form-control:focus {
+    border-color: #ff9800;
+    box-shadow: 0 0 0 0.2rem rgba(255, 152, 0, 0.25);
+}
+
+.form-label {
+    color: #5a3b1e;
+    font-weight: 600;
+}
+
+/* ESTILOS PARA CARDS */
+.card {
+    border-width: 2px;
+    border-color: #ff9800;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    color: #ff6f00;
+    font-weight: bold;
+}
+
+/* ESTILOS PARA TÍTULOS Y PÁRRAFOS */
+.page-title {
+    color: #ff6f00;
+    font-weight: bold;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    color: #5a3b1e;
+}
+
+/* ESTILOS PARA PRECIOS */
+.product-price {
+    color: #ff6f00;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* ESTILOS PARA LINKS */
+.social-link {
+    color: #ff6f00;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    text-decoration: underline;
+}
+
+/* ESTILOS PARA CÓDIGO */
+code {
+    background: #fff;
+    padding: 2px 4px;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
 
@@ -97,6 +159,10 @@ footer {
     .button-bottom {
         font-size: 1rem;
         padding: 12px;
+    }
+
+    body {
+        font-size: 0.95rem;
     }
 
 }
